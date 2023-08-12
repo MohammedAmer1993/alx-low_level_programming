@@ -28,6 +28,8 @@ int main(void)
 					if (i == 9 && j == 9 && l == 8 && k == 9)
 						continue;
 					putchar(',');
+				}
+			}
 		}
 	}
 	putchar(10);
