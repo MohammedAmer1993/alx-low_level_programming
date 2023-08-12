@@ -12,6 +12,6 @@ int main(void)
 
 	for (i = 0; i < 26; ++i)
 		putchar(c++);
-	putchar("\n");
+	putchar(10);
 	return (0);
 }
