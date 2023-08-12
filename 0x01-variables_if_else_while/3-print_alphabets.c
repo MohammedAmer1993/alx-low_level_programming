@@ -12,6 +12,10 @@ int main(void)
 
 	for (i = 0; i < 26; ++i)
 		putchar(c++);
+	c = 'A';
+	for (i = 0; i < 26; ++i)
+		putchar(c++);
+
 	putchar(10);
 	return (0);
 }
