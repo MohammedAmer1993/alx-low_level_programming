@@ -1,7 +1,7 @@
 /**
   * _abs - absolute value
   * @num: the number to get its abs val
-
+  *
   * Return: absolute value of n (int)
   */
 int _abs(int num)
