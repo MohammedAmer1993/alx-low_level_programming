@@ -8,4 +8,5 @@
 #include "4-isalpha.h"
 #include "5-sign.h"
 #include "6-abs.h"
+#include "7-print_last_digit.c"
 #endif
