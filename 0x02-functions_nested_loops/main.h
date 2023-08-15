@@ -1,5 +1,6 @@
-#ifndef MAIN_H_ 
+#ifndef MAIN_H_
 #define MAIN_H_
 
-int _putchar(char c);
+#include "_putchar.h"
+#include "1-alphabet.h"
 #endif
