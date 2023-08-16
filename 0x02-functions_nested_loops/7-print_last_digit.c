@@ -1,3 +1,4 @@
+#include "_putchar.h"
 /**
   * print_last_digit - print digit
   * @num: number to get it's last digit
@@ -6,5 +7,7 @@
   */
 int print_last_digit(int num)
 {
-	return (num % 10);
+	num = num % 10;
+	_putchar(num + '0');
+	return (num);
 }
