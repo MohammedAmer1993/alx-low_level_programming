@@ -7,7 +7,9 @@
   */
 int print_last_digit(int num)
 {
-	num = num % 10;
-	_putchar(num + '0');
-	return (num);
+	int tmp = 0;
+
+	tmp = num % 10;
+	_putchar(tmp + '0');
+	return (tmp);
 }
