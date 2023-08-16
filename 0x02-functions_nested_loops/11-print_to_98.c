@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-  * pirnt_to_98 - print numbers to limit
+  * print_to_98 - print numbers to limit
   * @n: the start
   *
   * Return: nothing (void func)
