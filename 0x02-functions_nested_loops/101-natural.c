@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
-  * natural - sum of numbers
+  * main - Entry
   *
-  * Return: sum (int)
+  * Return: alaways 0 (success)
   */
-int natural(void)
+int main(void)
 {
 	int i;
 	int sum = 0;
@@ -15,5 +15,6 @@ int natural(void)
 		if (i % 3 == 0 || i % 5 == 0)
 			sum += i;
 	}
-	return (sum);
+	printf("%d\n", sum);
+	return (0);
 }
