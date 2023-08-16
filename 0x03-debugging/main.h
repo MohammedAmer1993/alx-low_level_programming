@@ -1,5 +1,6 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-positive_or_negative();
+int largest_number(int a, int b, int c);
+void positive_or_negative(void);
 #endif
