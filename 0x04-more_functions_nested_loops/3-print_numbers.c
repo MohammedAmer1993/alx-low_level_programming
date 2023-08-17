@@ -1,4 +1,4 @@
-int _putchar(char c);
+#inlcude "_putchar.h"
 /**
   * print_numbers - print from 0 to 9
   *
