@@ -1,6 +1,6 @@
 #ifndef MAIN_H_
 #define MAIN_H_
-int _putchar(char c);
+#include "_putchar.h"
 void print_numbers(void);
 int mul(int a, int b);
 int _isdigit(int c);
