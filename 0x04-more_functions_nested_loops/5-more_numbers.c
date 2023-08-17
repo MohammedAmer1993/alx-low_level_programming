@@ -5,6 +5,7 @@
   */
 void more_numbers(void)
 {
+	int z;
 	int i;
 	int f;
 	int s;
