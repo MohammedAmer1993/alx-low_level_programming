@@ -1,7 +1,7 @@
 #include "_putchar.h"
 /**
-  * print_square - print a shape of diagonal
-  * @size: height of diagonal
+  * print_square - print a shape of square
+  * @size: edge of square
   * Return: nothing (void)
   */
 void print_square(int size)
