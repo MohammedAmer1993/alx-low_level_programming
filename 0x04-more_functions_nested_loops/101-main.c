@@ -7,15 +7,15 @@
  */
 int main(void)
 {
-    print_number(-2147483647);
-    _putchar('\n');
-    print_number(402);
-    _putchar('\n');
-    print_number(1024);
-    _putchar('\n');
-    print_number(0);
-    _putchar('\n');
-    print_number(-98);
-    _putchar('\n');
-    return (0);
+	print_number(1000000000);
+	_putchar('\n');
+	print_number(402);
+	_putchar('\n');
+	print_number(1024);
+	_putchar('\n');
+	print_number(0);
+	_putchar('\n');
+	print_number(-98);
+	_putchar('\n');
+	return (0);
 }
