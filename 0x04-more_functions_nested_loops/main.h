@@ -1,6 +1,7 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 #include "_putchar.h"
+void print_number(int n);
 void print_triangle(int size);
 void print_square(int size);
 void print_diagonal(int n);
