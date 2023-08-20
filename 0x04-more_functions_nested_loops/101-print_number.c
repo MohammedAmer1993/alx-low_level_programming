@@ -1,4 +1,4 @@
-#include "_putchar.h"
+int _putchar(char c);
 /**
   * print_number - print a number using _putchar
   * @n: number to be printed
