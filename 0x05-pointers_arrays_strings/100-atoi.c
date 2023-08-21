@@ -21,12 +21,6 @@ int _atoi(char *s)
 			++s;
 			continue;
 		}
-		else if ((*s < 48 || *s > 57) && *s != '+' && *s != ' ' && *s != '-')
-		{
-			j = 1;
-			++s;
-			continue;
-		}
 		else if (*s > 47 && *s < 58)
 		{
 			while (*s > 47 && *s < 58)
