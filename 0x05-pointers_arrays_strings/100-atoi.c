@@ -19,19 +19,13 @@ int _atoi(char *s)
 		}
 		else if (*s > 47 && *s < 58)
 		{
-			while (*s > 47 && *s < 58 && j == 1)
+			while (*s > 47 && *s < 58)
 			{
 				tmp = *s - '0';
 				i = 10 * i + tmp;
 				++s;
 			}
-			while (*s > 47 && *s < 58 && j == -1)
-			{
-				tmp = *s - '0';
-				i = (-10 * i) - tmp;
-				++s;
-			}
-			return (i);
+			return (i * j);
 		}
 		++s;
 	}
