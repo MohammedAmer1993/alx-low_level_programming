@@ -24,15 +24,14 @@ int _atoi(char *s)
 				tmp = *s - '0';
 				i = 10 * i + tmp;
 				++s;
-				return (i);
 			}
 			while (*s > 47 && *s < 58 && j == -1)
 			{
 				tmp = *s - '0';
-				i = -10 * i - tmp;
+				i = (-10 * i) - tmp;
 				++s;
-				return (i);
 			}
+			return (i);
 		}
 		++s;
 	}
