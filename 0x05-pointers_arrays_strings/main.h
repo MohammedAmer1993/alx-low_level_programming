@@ -1,6 +1,7 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 #include "_putchar.h"
+void puts2(char *str);
 void _puts(char *str);
 void print_rev(char *s);
 void rev_string(char *s);
