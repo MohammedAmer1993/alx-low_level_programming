@@ -1,39 +1,39 @@
 /**
   * _atoi - conver string into int
-  * @s: string to be converted
+  * @s: string to be sonverted
   * Return: the intger val
   */
-int _atoi(char *c)
+int _atoi(char *s)
 {
 	int j = 1;
 	int i = 0;
 	int tmp = 0;
 
-	while (*c)
+	while (*s)
 	{
-		if (*c == '-')
+		if (*s == '-')
 		{
 			j *= -1;
-			++c;
+			++s;
 		}
-		else if (*c == '+' || *c == ' ')
+		else if (*s == '+' || *s == ' ')
 		{
-			++c;
+			++s;
 			continue;
 		}
-		else if ((*c < 48 || *c > 57) && *c != '+' && *c != ' ')
+		else if ((*s < 48 || *s > 57) && *s != '+' && *s != ' ' && *s != '-')
 		{
 			j = 1;
-			++c;
+			++s;
 			continue;
 		}
-		else if (*c > 47 && *c < 58)
+		else if (*s > 47 && *s < 58)
 		{
-			while (*c > 47 && *c < 58)
+			while (*s > 47 && *s < 58)
 			{
-				tmp = *c - '0';
+				tmp = *s - '0';
 				i = 10 * i + tmp;
-				++c;
+				++s;
 			}
 			return (i * j);
 		}
