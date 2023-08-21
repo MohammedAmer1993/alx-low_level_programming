@@ -8,6 +8,7 @@ int _atoi(char *s)
 	int j = 1;
 	int i = 0;
 	int tmp = 0;
+	int count = 0;
 
 	while (*s)
 	{
@@ -21,9 +22,17 @@ int _atoi(char *s)
 		{
 			while (*s > 47 && *s < 58)
 			{
+				if (count == 9)
+				{
+					tmp = -1 * (*s - '0');
+					i = -i;
+					i = 10 * i + tmp;
+					return (i);
+				}
 				tmp = *s - '0';
 				i = 10 * i + tmp;
 				++s;
+				++count;
 			}
 			return (i * j);
 		}
