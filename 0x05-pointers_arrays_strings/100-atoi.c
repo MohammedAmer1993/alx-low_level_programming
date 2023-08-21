@@ -25,10 +25,11 @@ int _atoi(char *c)
 		{
 			j = 1;
 			++c;
+			continue;
 		}
 		else if (*c > 47 && *c < 58)
 		{
-			while (*c > 57 && *c < 58)
+			while (*c > 47 && *c < 58)
 			{
 				tmp = *c + '0';
 				i = 10 * i + tmp;
