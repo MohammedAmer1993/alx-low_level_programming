@@ -17,7 +17,7 @@ void rev_string(char *s)
 	{
 		tmpchar = *s;
 		*s = *tmp;
-		*tmp = tmpcahr;
+		*tmp = tmpchar;
 		++s;
 		--tmp;
 	}
