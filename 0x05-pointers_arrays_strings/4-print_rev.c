@@ -6,7 +6,7 @@
   */
 void print_rev(char *s)
 {
-	char *tmp = --s;
+	char *tmp = s - 1;
 
 	while (*s)
 	{
