@@ -22,7 +22,7 @@ int _atoi(char *s)
 		{
 			while (*s > 47 && *s < 58)
 			{
-				if (count == 9)
+				if (count == 9 && j == -1)
 				{
 					tmp = -1 * (*s - '0');
 					i = -i;
