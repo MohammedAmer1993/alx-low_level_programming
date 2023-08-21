@@ -31,7 +31,7 @@ int _atoi(char *c)
 		{
 			while (*c > 47 && *c < 58)
 			{
-				tmp = *c + '0';
+				tmp = *c - '0';
 				i = 10 * i + tmp;
 				++c;
 			}
