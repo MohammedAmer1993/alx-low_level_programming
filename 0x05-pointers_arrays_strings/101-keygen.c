@@ -3,10 +3,11 @@
 #include <time.h>
 /**
   * main - Entry point
-  * Return: int password
+  * Return: alaways 0 (success)
   */
 int main(void)
 {
 	srand(time(NULL));
-	return (rand());
+	printf("%d", rand());
+	return (0);
 }
