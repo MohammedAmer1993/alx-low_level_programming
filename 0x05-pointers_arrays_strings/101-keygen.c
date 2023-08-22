@@ -7,6 +7,6 @@
   */
 int main(void)
 {
-	srand(time());
+	srand(time(NULL));
 	return (rand());
 }
