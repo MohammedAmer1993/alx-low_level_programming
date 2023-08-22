@@ -7,7 +7,10 @@
   */
 int main(void)
 {
+	int i;
+
 	srand(time(NULL));
-	printf("%d", rand() % 10000);
+	for (i = 0; i < 4; ++i)
+		printf("%d", rand() % 10000);
 	return (0);
 }
