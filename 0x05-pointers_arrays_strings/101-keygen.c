@@ -8,6 +8,6 @@
 int main(void)
 {
 	srand(time(NULL));
-	printf("%d", rand() % 100);
+	printf("%d", rand() % 1000);
 	return (0);
 }
