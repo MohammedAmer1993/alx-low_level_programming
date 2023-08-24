@@ -5,7 +5,10 @@ char *string_toupper(char *s)
 	while (*s + i)
 	{
 		if (*(s + i) > 96 && *(s + i) < 123)
+		{
 			*(s + i) -= 32;
+		}
 		++i;
 	}
+	return (s);
 }
