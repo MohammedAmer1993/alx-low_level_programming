@@ -6,6 +6,7 @@
 char *cap_string(char *s)
 {
 	int i = 0;
+
 	if (*s > 96 && *s < 123)
 		*s -= 32;
 	while (*(s + i))
