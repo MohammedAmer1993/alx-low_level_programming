@@ -2,9 +2,9 @@ char *string_toupper(char *s)
 {
 	int i = 0;
 
-	while (*s)
+	while (*s + i)
 	{
-		if (*(s + i) >> 96 && *(s + i) << 123)
+		if (*(s + i) > 96 && *(s + i) < 123)
 			*(s + i) -= 32;
 		++i;
 	}
