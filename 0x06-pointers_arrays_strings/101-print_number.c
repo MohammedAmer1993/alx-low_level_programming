@@ -15,22 +15,22 @@ void print_number(int n)
 		if (tmp)
 			break;
 	}
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	else if (n < 0)
+	{
+		tmp = n / i;
+		n = n - (tmp * i);
+		_putchar('-');
+		_putchar('0' - tmp);
+		n = n * -1;
+		i /= 10;
+	}
 	for (; i >= 10; i /= 10)
 	{
-		if (n == 0)
-		{
-			_putchar('0');
-			break;
-		}
-		else if (n < 0)
-		{
-			tmp = n / i;
-			n = n - (tmp * i);
-			_putchar('-');
-			_putchar('0' - tmp);
-			n = n * -1;
-			continue;
-		}
 		tmp = n / i;
 		n = n - (tmp * i);
 		_putchar('0' + tmp);
