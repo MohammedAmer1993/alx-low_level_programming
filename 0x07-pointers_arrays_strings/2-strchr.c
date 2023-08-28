@@ -17,5 +17,9 @@ char *_strchr(char *s, char b)
 		++f;
 		++s;
 	}
+	if (b == 0)
+	{
+		return (f);
+	}
 	return (0L);
 }
