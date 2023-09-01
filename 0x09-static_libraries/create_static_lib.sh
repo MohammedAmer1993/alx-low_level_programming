@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c *.c | ar -rc libmy.a
+gcc -c *.c | ar -rc liball.a
