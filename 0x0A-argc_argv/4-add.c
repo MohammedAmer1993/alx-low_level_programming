@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
   * main - entry point to sum prog
   * @argc: number of arg passed
@@ -11,6 +10,7 @@ int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int i;
+	int j;
 
 	if (argc < 2)
 	{
@@ -19,12 +19,15 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; ++i)
 	{
-		if (argv[i][0] == '0' && strlen(argv[i]) == 1)
-			continue;
-		if (!atoi(argv[i]))
+		j = 0;
+		while (argv[i][j])
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			++j;
 		}
 	}
 	for (i = 0; i < argc; ++i)
