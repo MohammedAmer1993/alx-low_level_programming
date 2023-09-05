@@ -24,7 +24,7 @@ int word_count(char *str)
   */
 char **strtow(char *str)
 {
-	int z, i, tmp, count;
+	int z, i, tmp, count, m = 0;
 	char **ptr;
 
 	count = word_count(str);
