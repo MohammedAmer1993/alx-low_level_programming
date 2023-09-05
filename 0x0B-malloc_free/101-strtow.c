@@ -24,27 +24,35 @@ int word_count(char *str)
   */
 char **strtow(char *str)
 {
-	int z = 0;
-	int i = 0;
-	int m = 0;
-	int count = 0;
+	int z, i, tmp, count;
 	char **ptr;
+
 	count = word_count(str);
 	ptr = (char **) malloc ((count + 1) * sizeof(char *));
 	if (!ptr)
 		return (0L);
-	for (i = 0; i < count; ++i)
-		ptr[i] = (char *) malloc(32 * sizeof(char));
-	
 	for (i = 0; str[i]; ++i)
 	{
 		if (str[i] == ' ')
-		{
 			continue;
-		}
 		else
 		{
-			for ( z = 0; str[i]; ++z)
+			tmp = i;
+			for (z = 0; str[tmp] != ' ' && str[z]; ++z)
+				++tmp;
+			ptr[m] = (char *) malloc((tmp + 1) * sizeof(char));
+			if (!ptr[m])
+			{
+				while (m != 0)
+				{
+					free(ptr[m]);
+					--m;
+				}
+				free(ptr);
+				return (0L);
+			}
+
+			for (z = 0; str[i]; ++z)
 			{
 				if (str[i] == ' ')
 					break;
