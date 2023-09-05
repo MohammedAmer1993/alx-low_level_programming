@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 			++m;
 		}
 		ptr[m] = '\n';
-		++m
+		++m;
 	}
 	ptr[m] = '\0';
 	return (ptr);
