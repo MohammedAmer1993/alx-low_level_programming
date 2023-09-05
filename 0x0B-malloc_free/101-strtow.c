@@ -31,6 +31,11 @@ char **strtow(char *str)
 	char **ptr;
 	count = word_count(str);
 	ptr = (char **) malloc ((count + 1) * sizeof(char *));
+	if (!ptr)
+		return (0L);
+	for (i = 0; i < count; ++i)
+		ptr[i] = (char *) malloc(32 * sizeof(char));
+	
 	for (i = 0; str[i]; ++i)
 	{
 		if (str[i] == ' ')
