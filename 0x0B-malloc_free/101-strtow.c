@@ -27,8 +27,8 @@ char **strtow(char *str)
 	int z, i, count, m = 0;
 	char **ptr;
 	
-	if (!str || (strlen(str) == 1 && *str = ' '))
-		break;
+	if (!str || (strlen(str) == 1 && *str == ' '))
+		return (0L);
 	count = word_count(str);
 	ptr = (char **) malloc((count + 1) * sizeof(char *));
 	if (!ptr)
