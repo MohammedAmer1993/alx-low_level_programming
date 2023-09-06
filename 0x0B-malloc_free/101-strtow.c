@@ -57,8 +57,10 @@ char **strtow(char *str)
 				ptr[m][z] = str[i];
 				++i;
 				if (str[i] == ' ' || !str[i])
+				{
 					++z;
 					break;
+				}
 			}
 			ptr[m][z] = '\0';
 			++m;
