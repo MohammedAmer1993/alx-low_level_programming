@@ -40,10 +40,10 @@ char **strtow(char *str)
 			for (z = i; str[z] != ' ' && str[z]; ++z)
 			;
 			ptr[m] = (char *) malloc((z - i + 1) * sizeof(char));
-			if (!ptr[m])
+			if (!ptr[m--])
 			{
 				while (m != -1)
-					free(ptr[(m - 1)--]);
+					free(ptr[m--]);
 				free(ptr);
 				return (0L);
 			}
