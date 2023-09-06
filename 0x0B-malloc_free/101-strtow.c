@@ -38,9 +38,9 @@ char **strtow(char *str)
 		else
 		{
 			tmp = i;
-			for (z = 0; str[tmp] != ' ' && str[z]; ++z)
+			for (z = 0; str[tmp] != ' ' && str[tmp]; ++z)
 				++tmp;
-			ptr[m] = (char *) malloc((tmp + 1) * sizeof(char));
+			ptr[m] = (char *) malloc((z + 1) * sizeof(char));
 			if (!ptr[m])
 			{
 				while (m != 0)
