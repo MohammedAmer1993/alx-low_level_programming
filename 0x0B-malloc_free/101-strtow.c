@@ -18,6 +18,21 @@ int word_count(char *str)
 	return (count);
 }
 /**
+  * free_prev - free dynamically allocated mem
+  * @d2: 2d array
+  * @m: point of star
+  * Return: null pointer alaways
+  */
+char *free_prev(char **d2, int m)
+{
+	while (m != -1)
+	{
+		free(d2[m - 1]);
+		--m;
+	}
+	free(ptr);
+}
+/**
   * strtow - split a string
   * @str: string to be splited
   * Return: array  of strings (double pointer)
@@ -43,15 +58,7 @@ char **strtow(char *str)
 			;
 			ptr[m] = (char *) malloc((z - i + 1) * sizeof(char));
 			if (!ptr[m])
-			{
-				while (m != -1)
-				{
-					free(ptr[m - 1]);
-					--m;
-				}
-				free(ptr);
-				return (0L);
-			}
+				return (free_prev(ptr, m));
 			for (z = 0; str[i]; ++z)
 			{
 				if (str[i] == ' ')
