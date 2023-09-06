@@ -26,7 +26,7 @@ char **strtow(char *str)
 {
 	int z, i, count, m = 0;
 	char **ptr;
-	
+
 	if (*str == 0 || !word_count(str))
 		return (0L);
 	count = word_count(str);
@@ -42,13 +42,10 @@ char **strtow(char *str)
 			for (z = i; str[z] != ' ' && str[z]; ++z)
 			;
 			ptr[m] = (char *) malloc((z - i + 1) * sizeof(char));
-			if (!ptr[m])
+			if (!ptr[m--])
 			{
 				while (m != -1)
-				{
-					free(ptr[m]);
-					--m;
-				}
+					free(ptr[m--]);
 				free(ptr);
 				return (0L);
 			}
