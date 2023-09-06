@@ -31,6 +31,7 @@ char *free_prev(char **d2, int m)
 		--m;
 	}
 	free(d2);
+	return (0L);
 }
 /**
   * strtow - split a string
