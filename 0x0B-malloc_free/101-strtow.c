@@ -42,23 +42,25 @@ char **strtow(char *str)
 			ptr[m] = (char *) malloc((z - i + 1) * sizeof(char));
 			if (!ptr[m])
 			{
-				while (m != 0)
-					free(ptr[--m]);
+				while (m != -1)
+					free(ptr[(m - 1)--]);
 				free(ptr);
 				return (0L);
 			}
 			for (z = 0; str[i]; ++z)
 			{
-				ptr[m][z] = str[i];
-				++i;
-				if (str[i] == ' ' || !str[i])
+				if (str[i] == ' ')
 				{
 					++z;
 					break;
 				}
+				ptr[m][z] = str[i];
+				++i;
 			}
 			ptr[m][z] = '\0';
 			++m;
+			if (!str[i])
+				break;
 		}
 	}
 	ptr[m] = 0L;
