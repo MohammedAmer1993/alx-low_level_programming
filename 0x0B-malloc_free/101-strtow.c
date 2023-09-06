@@ -23,7 +23,7 @@ int word_count(char *str)
   * @m: point of star
   * Return: null pointer alaways
   */
-char *free_prev(char **d2, int m)
+char **free_prev(char **d2, int m)
 {
 	while (m != -1)
 	{
