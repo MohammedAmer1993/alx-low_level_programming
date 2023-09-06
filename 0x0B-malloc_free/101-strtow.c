@@ -40,10 +40,13 @@ char **strtow(char *str)
 			for (z = i; str[z] != ' ' && str[z]; ++z)
 			;
 			ptr[m] = (char *) malloc((z - i + 1) * sizeof(char));
-			if (!ptr[m--])
+			if (!ptr[m])
 			{
 				while (m != -1)
-					free(ptr[m--]);
+				{
+					free(ptr[m]);
+					--m;
+				}
 				free(ptr);
 				return (0L);
 			}
@@ -60,7 +63,7 @@ char **strtow(char *str)
 			ptr[m][z] = '\0';
 			++m;
 			if (!str[i])
-				break;
+				--i;
 		}
 	}
 	ptr[m] = 0L;
