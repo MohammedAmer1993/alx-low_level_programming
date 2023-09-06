@@ -30,7 +30,7 @@ char *free_prev(char **d2, int m)
 		free(d2[m - 1]);
 		--m;
 	}
-	free(ptr);
+	free(d2);
 }
 /**
   * strtow - split a string
