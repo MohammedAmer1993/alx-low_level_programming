@@ -10,12 +10,22 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
+	char *cp_name;
+	char *cp_owner;
 
+	if (!name)
+		cp_name = "";
+	else
+		cp_name = name;
+	if (!owner)
+		cp_owner = "";
+	else
+		cp_owner = owner;
 	d = (dog_t *)malloc(sizeof(dog_t));
 	if (!d)
 		return (0L);
-	d->name = name;
+	d->name = cp_name;
 	d->age = age;
-	d->owner = owner;
+	d->owner = cp_owner;
 	return (d);
 }
