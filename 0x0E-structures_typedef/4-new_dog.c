@@ -32,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (0L);
 	}
-	d->name = cp_name;
+	d->name = strdup(cp_name);
 	d->age = age;
 	d->owner = malloc(strlen(cp_owner) + 1);
 	if (!(d->owner))
@@ -41,6 +41,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (0L);
 	}
-	d->owner = cp_owner;
+	d->owner = strdup(cp_owner);
 	return (d);
 }
