@@ -15,26 +15,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cp_name = name;
 	char *cp_owner = owner;
 
-	if (!name || !owner)
-		return (0L);
 	d = (dog_t *)malloc(sizeof(dog_t));
 	if (!d)
 		return (0L);
-	d->name = malloc(strlen(cp_name) + 1);
+	d->name = strdup(name);
 	if (!(d->name))
 	{
 		free(d);
 		return (0L);
 	}
-	d->name = strdup(cp_name);
 	d->age = age;
-	d->owner = malloc(strlen(cp_owner) + 1);
+	d->owner = strdup(owner);
 	if (!(d->owner))
 	{
 		free(d->name);
 		free(d);
 		return (0L);
 	}
-	d->owner = strdup(cp_owner);
 	return (d);
 }
