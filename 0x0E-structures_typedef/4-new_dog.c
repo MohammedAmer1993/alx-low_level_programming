@@ -12,8 +12,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 
 	dog_t *d;
-	char *cp_name;
-	char *cp_owner;
+	char *cp_name = name;
+	char *cp_owner = owner;
 
 	if (!name || !owner)
 		return (0L);
