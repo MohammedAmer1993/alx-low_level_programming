@@ -9,7 +9,7 @@
   */
 int main(int argc, char *argv[])
 {
-	short *p = (short *) &main;
+	unsigned char *p = (unsigned char *) &main;
 	int i = 0;
 
 	if (argc < 2)
