@@ -11,6 +11,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list ap;
 	unsigned int i;
 
+	if (n == 0 && searator == 0)
+		return;
 	if (n == 0)
 	{
 		printf("%s\n", separator);
