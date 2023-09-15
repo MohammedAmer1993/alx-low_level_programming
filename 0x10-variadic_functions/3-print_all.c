@@ -32,6 +32,7 @@ void print_all(const char * const format, ...)
 				{
 					printf("%s%s", sep, tmp);
 					break;
+				}
 				if (!tmp)
 				{
 					printf("%s%s", sep, "nil");
