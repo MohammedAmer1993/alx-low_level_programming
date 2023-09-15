@@ -12,7 +12,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 	if (n == 0 && (separator == 0 || *separator == '\0'))
+	{
+		printf("\n");
 		return;
+	}
 	if (n == 0)
 	{
 		printf("%s\n", separator);
