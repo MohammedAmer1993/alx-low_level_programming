@@ -29,10 +29,14 @@ void print_all(const char * const format, ...)
 			case 's':
 				tmp = va_arg(ap, char *);
 				if (tmp)
+				{
 					printf("%s%s", sep, tmp);
-				else
+					break;
+				if (!tmp)
+				{
 					printf("%s%s", sep, "nil");
-				break;
+					break;
+				}
 		}
 		sep = ", ";
 		++i;
