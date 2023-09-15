@@ -7,60 +7,36 @@
   */
 void print_all(const char * const format, ...)
 {
-	int i = 0 , hold = 0;
+	int i = 0;
 	va_list ap;
 	char *tmp;
+	char *sep = "";
 
-	while(format[i])
-	{
-		if (format[i] == 'i' || format[i] == 'f' 
-				|| format[i] == 's' || format[i] == 'c')
-			hold = i;
-		++i;
-	}
-	i = 0;
 	va_start(ap, format);
-	while (i < hold)
+	while (format[i])
 	{
 		switch (format[i])
 		{
 			case 'i':
-				printf("%d, ", va_arg(ap, int));
+				printf("%s%d", sep, va_arg(ap, int));
 				break;
 			case 'f':
-				printf("%f, ", va_arg(ap, double));
+				printf("%s%f", sep, va_arg(ap, double));
 				break;
 			case 'c':
-				printf("%c, ", va_arg(ap, int));
+				printf("%s%c", sep, va_arg(ap, int));
 				break;
 			case 's':
 				tmp = va_arg(ap, char *);
 				if (tmp)
-					printf("%s, ", tmp);
+					printf("%s%s", sep, tmp);
 				else
-					printf("%s, ", "nil");
+					printf("%s%s", sep, "nil");
 				break;
 		}
+		sep = ", ";
 		++i;
 	}
-	switch (format[i])
-	{
-		case 'i':
-			printf("%d\n", va_arg(ap, int));
-			break;
-		case 'f':
-			printf("%f\n", va_arg(ap, double));
-			break;
-		case 'c':
-			printf("%c\n", va_arg(ap, int));
-			break;
-		case 's':
-			tmp = va_arg(ap, char *);
-			if (tmp)
-				printf("%s\n", tmp);
-			else
-				printf("%s\n", "nil");
-			break;
-	}
+	printf("\n");
+	va_end(ap);
 }
-
