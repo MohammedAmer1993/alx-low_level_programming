@@ -14,7 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n == 0)
 	{
-		printf("%s\n", separator)
+		printf("%s\n", separator);
 		return;
 	}
 	va_start(ap, n);
