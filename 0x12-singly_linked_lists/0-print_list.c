@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "lists.h"
 /**
   * print_list - prints a singly linked list
