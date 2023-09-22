@@ -2,7 +2,7 @@
 /**
   * add_node_end - adds node at end of linked list
   * @head: the list
-  * str: the string member
+  * @str: the string member
   * Return: the list address
   */
 
