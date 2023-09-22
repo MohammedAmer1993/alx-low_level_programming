@@ -23,7 +23,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	tmp->len = i;
 	tmp->next = 0L;
 	if (*head == 0L)
+	{
 		*head = tmp;
+		return (*head);
+	}
 	else
 	{
 		iterator = *head;
