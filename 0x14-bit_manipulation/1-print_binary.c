@@ -7,6 +7,11 @@
   */
 void print_binary(unsigned long int n)
 {
-	int num = 0;
-	if (
+	if (n == 0)
+	{
+		return;
+	}
+
+	print_binary(n/2);
+	_putchar((n % 2) + '0');
 }
