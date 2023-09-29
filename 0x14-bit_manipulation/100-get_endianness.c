@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * get_indianness - know the endianness of cpu
+  * get_endianness - know the endianness of cpu
   * Return: 1 if little endian, 0 if big endian
   */
 int get_endianness(void)
