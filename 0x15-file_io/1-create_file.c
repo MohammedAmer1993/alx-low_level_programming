@@ -7,4 +7,20 @@
   */
 int create_file(const char *filename, char *text_content)
 {
+	int fd;
+
+	if (filename == 0L)
+		return (-1);
+	fd = open(filename, O_RDWR | O_TRUNC);
+	if (fd < 0)
+	{
+		fd = open(filename, O_WRONLY | O_CREAT, 0600);
+		if (fd < 0)
+			return (-1);
+		if (text_content != 0L)
+			if (write(fd, text_content, strlen(text_content)) < 0)
+				return (-1);
+	}
+	return (1);
+
 }
