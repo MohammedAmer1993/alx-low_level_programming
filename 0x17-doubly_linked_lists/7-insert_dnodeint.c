@@ -11,7 +11,7 @@
  {
 	if ((*tmp2)->next)
 	{
-		(*tmp)->prev = tmp2;
+		(*tmp)->prev = (*tmp2);
 		(*tmp)->next = (*tmp2)->next;
 		(*tmp2)->next->prev = (*tmp);
 		(*tmp2)->next = (*tmp);
