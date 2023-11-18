@@ -1,6 +1,29 @@
 #include "lists.h"
 
 /**
+  * fix_pointers - rearrange the pointers
+  * @tmp: the node
+  * @tmp2: the postion
+  * Return: Nothing
+  */
+
+ void fix_pointers(dlistint_t **tmp, dlistint_t **tmp2)
+ {
+	if ((*tmp2)->next)
+	{
+		(*tmp)->prev = tmp2;
+		(*tmp)->next = (*tmp2)->next;
+		(*tmp2)->next->prev = (*tmp);
+		(*tmp2)->next = (*tmp);
+	}
+	else
+	{
+		(*tmp2)->next = (*tmp);
+		(*tmp)->prev = (*tmp2);
+	}
+ }
+
+/**
   * insert_dnodeint_at_index - insert node
   * @h: the list
   * @idx: the postion
@@ -14,6 +37,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *tmp = malloc(sizeof(dlistint_t));
 	dlistint_t *tmp2 = *h;
 
+	if (!tmp)
+		return (NULL);
 	tmp->n = n;
 	tmp->next = NULL;
 	tmp->prev = NULL;
@@ -36,17 +61,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			free(tmp);
 			return (NULL);
 		}
-	if (tmp2->next)
-	{
-		tmp->prev = tmp2;
-		tmp->next = tmp2->next;
-		tmp2->next->prev = tmp;
-		tmp2->next = tmp;
-	}
-	else
-	{
-		tmp2->next = tmp;
-		tmp->prev = tmp2;
-	}
+	fix_pointers(&tmp, &tmp2);
 	return (tmp);
 }
