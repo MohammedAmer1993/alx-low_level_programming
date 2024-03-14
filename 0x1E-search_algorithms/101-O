@@ -1,1 +1,1 @@
-O(2sqrt(n))
+O(2 * sqrt(n))
