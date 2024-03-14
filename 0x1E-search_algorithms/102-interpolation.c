@@ -34,8 +34,6 @@ int interpolation_search(int *array, size_t size, int value)
 	while (low < high)
 	{
 		index = formula(low, high, array[low], array[high], value);
-		
-
 		printf("Value checked array[%ld] = [%d]\n", index, array[index]);
 		if (array[index] == value)
 		{
@@ -49,8 +47,6 @@ int interpolation_search(int *array, size_t size, int value)
 		{
 			low = index;
 		}
-		
-
 		printf("index is %ld\n", index);
 		while (index != low && index > low)
 		{
