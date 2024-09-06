@@ -16,10 +16,10 @@ def island_perimeter(grid):
     for i in range(len(grid)):
         for x in range(len(grid[i])):
             if grid[i][x] == 1:
-                return rec(i, x, visitied_squares, grid)
+                return rec(i, x, visitied_squares, grid, len(grid) - 1, len(grid[i]) - 1)
 
 
-def rec(i, x, visited, grid):
+def rec(i, x, visited, grid, maxI, maxX):
     '''
     rec - recursive function to evaluate the area
     Args:
@@ -27,6 +27,8 @@ def rec(i, x, visited, grid):
         x (int): the x coordinate
         visitiec: array of all visited points
         grid: the grid we are going throw
+        maxI (int): the end of the grid in i direction
+        maxX (int): the end of the grid in x direction 
     Return:
         the priemeter of the island
     '''
@@ -39,20 +41,28 @@ def rec(i, x, visited, grid):
             if grid[i-1][x] == 0:
                 res += 1
             else:
-                res += rec(i-1, x, visited, grid)
-        if i+1 <= 100:
+                res += rec(i-1, x, visited, grid, maxI, maxX)
+        else:
+            res += 1
+        if i+1 <= maxI:
             if grid[i+1][x] == 0:
                 res += 1
             else:
-                res += rec(i+1, x, visited, grid)
+                res += rec(i+1, x, visited, grid, maxI, maxX)
+        else:
+            res += 1
         if x-1 >= 0:
             if grid[i][x-1] == 0:
                 res += 1
             else:
-                res += rec(i, x-1, visited, grid)
-        if x+1 <= 100:
+                res += rec(i, x-1, visited, grid, maxI, maxX)
+        else:
+            res += 1
+        if x+1 <= maxX:
             if grid[i][x+1] == 0:
                 res += 1
             else:
-                res += rec(i, x+1, visited, grid)
+                res += rec(i, x+1, visited, grid, maxI, maxX)
+        else:
+            res += 1
     return res
