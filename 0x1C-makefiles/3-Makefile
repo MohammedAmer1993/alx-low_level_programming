@@ -1,0 +1,23 @@
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm
+
+all: $(OBJ)
+	@ $(CC) $(OBJ) -o $(NAME)
+
+clean:
+	-@ $(RM) *.o $(NAME)
+
+oclean:
+	-@ $(RM) *.o
+
+fclean:
+	-@ $(RM) *.o $(NAME) *~ *# *swp
+
+re: all
+
+$(OBJ): m.h
+
+.PHONY: all clean oclean fclean re
