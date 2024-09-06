@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-''' function to calculate the primeter of the island asuming that the whole map is 100 * 100 and there is know lakes inside the island
-	the island is represented by 1 and the water is represented by 0
+''' function to calculate the primeter of the island asuming that
+    there is know lakes inside the island
+    the island is represented by 1 and the water is represented by 0
 '''
 
 
@@ -16,7 +17,9 @@ def island_perimeter(grid):
     for i in range(len(grid)):
         for x in range(len(grid[i])):
             if grid[i][x] == 1:
-                return rec(i, x, visitied_squares, grid, len(grid) - 1, len(grid[i]) - 1)
+                return rec(i, x, visitied_squares,
+                           grid, len(grid) - 1, len(grid[i]) - 1)
+    return 0
 
 
 def rec(i, x, visited, grid, maxI, maxX):
@@ -28,7 +31,7 @@ def rec(i, x, visited, grid, maxI, maxX):
         visitiec: array of all visited points
         grid: the grid we are going throw
         maxI (int): the end of the grid in i direction
-        maxX (int): the end of the grid in x direction 
+        maxX (int): the end of the grid in x direction
     Return:
         the priemeter of the island
     '''
