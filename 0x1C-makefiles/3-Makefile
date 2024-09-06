@@ -16,7 +16,7 @@ oclean:
 fclean:
 	-@ $(RM) *.o $(NAME) *~ *# *swp
 
-re: all
+re: oclean all
 
 $(OBJ): m.h
 
